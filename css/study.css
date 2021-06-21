@@ -1,0 +1,250 @@
+li a{
+    text-decoration: none;
+    color: red;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+}
+ a:active{
+color:gainsboro ;
+} 
+a:hover {color:gainsboro;}
+
+h2{
+    color: red;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    position: relative;
+    top: -16px;
+  }
+  header{
+    padding-left: 10px;
+  }
+h3{
+    color: red;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 50px;
+}
+body{
+    background-color: black;
+    
+   display: block;
+   overflow-x:hidden ;
+   padding: 0;
+    margin: 0;
+    
+}
+
+img{
+    padding-left: 850px;
+    position: absolute;
+    top: 100px;
+    height: 700px;
+    right: 1px;
+    z-index: -1;
+
+}
+#left li{
+    width: 50%;
+    display: inline;
+    padding-left: 15px;
+    position: relative;
+    left: 1088px;
+    bottom: 79px;
+    font-size: 1.2rem;
+   
+  }
+#right{
+    width: 50%;
+  
+}
+h5{
+    padding-left: 50px;
+}
+
+/* -------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+
+h3 {
+  color: gainsboro;
+  font-size: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.2vw g;
+}
+
+h3::before {
+  top: 0;
+  left: 51px;
+  width: 0;
+  height: 100%;
+  color: red;
+  overflow: hidden;
+  position: absolute;
+  content: attr(data-text);
+  border-right: 2px solid red;
+  -webkit-text-stroke: 0vw #f7f7fe;
+  animation: animate 6s linear infinite;
+  
+}
+
+@keyframes animate {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 10%;
+  }
+}
+/* -------------------------- */
+.items{
+    list-style-type: none;
+    position: relative;
+    left: 14px;
+    font-size: 20px;
+    font-family: 'Viaoda Libre', cursive;
+    letter-spacing: 0.1em;
+    /* font-weight: bold; */
+}
+/* --------------------------------- */
+
+
+
+
+Result Skip Results Iframe
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
+*{
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif; */
+}
+/* html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #6665ee;
+} */
+::selection{
+  color: #fff;
+  background: red;
+}
+.skill-bars{
+  padding: 25px 30px;
+  width:30%;;
+  background: black;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  position: absolute;
+    left: 29px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+  color:gainsboro;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,0,0,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate  {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #444444;
+  /* // */
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 85%;
+}
+.bar .progress-line.jquery span{
+  width: 60%;
+}
+.bar .progress-line.python span{
+  width: 50%;
+}
+.bar .progress-line.mysql span{
+  width: 65%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "85%";
+}
+.progress-line.jquery span::after{
+  content: "60%";
+}
+.progress-line.python span::after{
+  content: "50%";
+}
+.progress-line.mysql span::after{
+  content: "65%";
+}
